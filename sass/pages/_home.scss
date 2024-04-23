@@ -1,0 +1,114 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../components/buttons" as *;
+
+.info {
+  text-align: center;
+  padding: 39px 30px 57px;
+  background-color: $main-bg-color;
+  &__title {
+    padding-bottom: 10px;
+  }
+  &__btn {
+    margin-top: 27px;
+    padding: 15px 20px;
+    @include main-btn;
+  }
+}
+
+.functioning {
+  background-color: #fff;
+  padding: 48px 20px 68px 20px;
+  h2 {
+    margin-bottom: 26px;
+    align-self: flex-start;
+    max-width: 1024px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    @include breakpoint(medium) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  li {
+    @include functioning__list;
+    position: relative;
+  }
+  &__step {
+    position: absolute;
+    left: -10px;
+    border: none;
+    background: $main-color;
+    border-radius: 50%;
+    padding: 1px 6px;
+    color: #fff;
+  }
+  i {
+    padding-right: 25px;
+  }
+  .fa-store {
+    color: $main-color;
+  }
+  @include breakpoint(large) {
+    padding: 50px 180px;
+  }
+}
+.restaurant__list {
+  display: flex;
+  flex-direction: column;
+  padding: 54px 0 66px;
+  h2 {
+    padding-bottom: 30px;
+    margin-left: 20px;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    @include restaurants__card;
+    &__card {
+      position: relative;
+      max-width: 490px;
+    }
+    &__heart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      padding-right: 25px;
+      &::before {
+        @include heart;
+      }
+      &::after {
+        @include heart;
+        @include heart-solid;
+      }
+      &:hover::before {
+        color: transparent;
+      }
+      &:hover::after {
+        font-weight: 700;
+        opacity: 1;
+      }
+    }
+    &__new {
+      @include restaurant__new;
+      position: absolute;
+      top: 13px;
+      right: 12px;
+    }
+    @include breakpoint(small) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  @include breakpoint(large) {
+    padding: 30px 180px;
+  }
+}

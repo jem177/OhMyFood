@@ -1,0 +1,43 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: $footer-bg;
+  padding: 22px 25px;
+  gap: 16px;
+  h2 {
+    font-family: $font-title;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 7px;
+    @include breakpoint(medium) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+  .footer__link {
+    gap: 7px;
+    color: #fff;
+    .fa-utensils {
+      margin-right: 15px;
+    }
+    .fa-handshake-angle {
+      margin-right: 10px;
+    }
+  }
+  @include breakpoint(medium) {
+    flex-direction: row-reverse;
+    gap: 100px;
+    align-items: center;
+    padding: 40px 40px;
+  }
+}

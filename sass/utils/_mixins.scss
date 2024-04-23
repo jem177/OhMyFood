@@ -1,0 +1,82 @@
+@use "../utils/variables" as *;
+
+@mixin functioning__list {
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $main-btn-gradient;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  padding: 28px;
+  max-width: 322px;
+  flex-grow: 1;
+}
+
+@mixin restaurants__card {
+  a {
+    flex-grow: 1;
+    flex-basis: 50%;
+  }
+  &__card {
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 15px;
+    img {
+      height: 231px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  &__icon {
+    font-size: 25px;
+    display: none;
+  }
+}
+@mixin restaurant__new {
+  background-color: $bg-green;
+  color: $text-green;
+  padding: 7px 9px;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 900px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+// Heart
+
+@mixin heart {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  transition: all 200ms linear;
+}
+
+@mixin heart-solid {
+  background: $heart-gradiant;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  cursor: pointer;
+}
