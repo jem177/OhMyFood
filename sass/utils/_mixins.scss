@@ -5,7 +5,7 @@
   border-radius: 20px;
   font-size: 16px;
   font-weight: 500;
-  background-color: $main-btn-gradient;
+  background-color: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   padding: 28px;
   max-width: 322px;
@@ -75,7 +75,6 @@
 @mixin heart-solid {
   background: $heart-gradiant;
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
   cursor: pointer;
