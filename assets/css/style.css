@@ -262,7 +262,7 @@ body {
 @media (min-width: 900px) {
   .functioning__list {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 }
 .functioning li {
@@ -276,6 +276,7 @@ body {
   max-width: 322px;
   flex-grow: 1;
   position: relative;
+  width: 100%;
 }
 .functioning__step {
   position: absolute;

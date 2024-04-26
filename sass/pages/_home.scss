@@ -33,12 +33,13 @@
     gap: 25px;
     @include breakpoint(medium) {
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
   }
   li {
     @include functioning__list;
     position: relative;
+    width: 100%;
   }
   &__step {
     position: absolute;
