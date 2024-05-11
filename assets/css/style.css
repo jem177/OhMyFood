@@ -290,7 +290,7 @@ body {
 .functioning i {
   padding-right: 25px;
 }
-.functioning .fa-store {
+.functioning .fa-solid:hover {
   color: #9356dc;
 }
 @media (min-width: 1200px) {
